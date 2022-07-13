@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Projection {
+namespace mj.gist.projection {
     public interface IRoomContainer {
         RenderTexture Front { get; }
         RenderTexture Back { get; }

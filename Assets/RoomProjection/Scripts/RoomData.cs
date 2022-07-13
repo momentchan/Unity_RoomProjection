@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Projection {
+namespace mj.gist.projection {
     [System.Serializable]
     public class RoomData {
         const float mm2m = 0.001f;
@@ -14,8 +12,7 @@ namespace Projection {
 
         [SerializeField] private int x, y, width, height, depth;
     }
-    public interface IProjectionUser {
-        RoomProjection Projection { get; set; }
-        void Setup(RoomProjection proj);
-    }
+    public enum Area { WallFront, WallRight, WallBack, WallLeft, FloorFront, FloorRight, FloorBack, FloorLeft };
+    public enum Direction { Front, Right, Back, Left, Floor };
+
 }
