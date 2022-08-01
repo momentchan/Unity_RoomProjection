@@ -23,7 +23,7 @@ namespace mj.gist.projection {
             cam.depthTextureMode = DepthTextureMode.Depth;
 
             (int w, int h) = RoomHelper.CalculateRosolution(proj, 0);
-            tgt = RTUtil.CreateRenderTexture(w, h, 24, RenderTextureFormat.ARGBFloat);
+            tgt = RTUtil.Create(w, h, 24, RenderTextureFormat.ARGBFloat);
             cam.targetTexture = tgt;
 
             pack = new RoomTexturePack(proj, tgt.width, tgt.height);

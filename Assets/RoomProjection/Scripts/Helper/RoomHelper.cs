@@ -13,7 +13,7 @@ namespace mj.gist.projection {
         public static RenderTexture CreateLeft(RoomProjection proj, int w, int h) => Create(GetFdw(proj) * w, GetFhh(proj) * h);
         public static RenderTexture CreateFloor(RoomProjection proj, int w, int h) => Create(proj.Width / proj.WholeWidth * w, proj.Depth / proj.WholeHeight * h);
         private static RenderTexture Create(float w, float h)
-            => RTUtil.CreateRenderTexture(Mathf.FloorToInt(w), Mathf.FloorToInt(h), 0, RenderTextureFormat.Default, true);
+            => RTUtil.Create(Mathf.FloorToInt(w), Mathf.FloorToInt(h), 0, RenderTextureFormat.Default, true);
 
         private static float GetFww(RoomProjection proj) => proj.Width / proj.WholeWidth;
         private static float GetFdw(RoomProjection proj) => proj.Depth / proj.WholeWidth;
